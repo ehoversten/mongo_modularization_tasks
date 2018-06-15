@@ -14,7 +14,6 @@ class TaskController {
   display_all(req, res) {
     Task.find( {}, (err, tasks)=> {
       if(tasks){
-				// return res.status(200).json(tasks:'tasks');
         // return res.status(200).json(tasks);
         console.log("Found: ", tasks)
         return res.status(200).render('dashboard', {tasks: tasks});
@@ -60,7 +59,6 @@ class TaskController {
 
       } else {
         console.log("Task created successfully");
-        // req.flash("errors","Welcome, "+user.firstName);
 
         // return res.status(200).json(task);
         return res.status(200).redirect("/dashboard");

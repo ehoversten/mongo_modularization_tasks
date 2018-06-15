@@ -13,8 +13,8 @@
         <h2>Task: <%= task.title %> </h2>
         <p>Details: <%= task.description %> </p>
         <p>Completed: <%= task.completed %> </p>
-        <p>Created: <%= task.created_at %> </p>
-        <p>Updated: <%= task.updated_at %> </p>
+        <p>Created: <%= task.createdAt %> </p>
+        <p>Updated: <%= task.updatedAt %> </p>
         <a href="/task/edit/<%= task.id %>" class="btn btn-info">Edit</a>
         <!-- <a href="/update" class="btn btn-danger">Edit</a> -->
         <a href="/dashboard" class="btn btn-warning">Back</a>
