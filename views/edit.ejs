@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/task_styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>Add a new Task</h1>
+        <form class="form-control" action="/task/<%= task.id %>" method="post">
+          Title:<input type="text" name="title" value="<%= task.title %>">
+          Description:<input type="textarea" name="description" value="<%= task.description %>">
+          Completed:<input type="checkbox" name="completed" value="<%= task.completed %>">
+          <input class='btn btn-primary' type="submit" name="submit" value="Update">
+        </form>
+        <a href="/dashboard" class="btn btn-success">Back</a>
+
+
+      </div>
+    </div>
+  </body>
+</html>

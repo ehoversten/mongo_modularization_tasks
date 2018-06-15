@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/task_styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h2>Task: <%= task.title %> </h2>
+        <p>Details: <%= task.description %> </p>
+        <p>Completed: <%= task.completed %> </p>
+        <p>Created: <%= task.created_at %> </p>
+        <p>Updated: <%= task.updated_at %> </p>
+        <a href="/task/edit/<%= task.id %>" class="btn btn-info">Edit</a>
+        <!-- <a href="/update" class="btn btn-danger">Edit</a> -->
+        <a href="/dashboard" class="btn btn-warning">Back</a>
+        <form class="form-group" action="/task/<%= task.id %>/delete" method="post" style="display: inline-block;">
+          <input class='btn btn-danger' type="submit" name="delete" value="Delete">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
